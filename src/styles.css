@@ -64,6 +64,13 @@ body{
   background-color: var(--dark);
 }
 
+input {
+  background-color: white;
+  width: 373px;
+  height: 37px;
+  border-radius: 5px;
+}
+
 /*
 @media (min-width: 1200px) {
   .container{
@@ -86,11 +93,7 @@ body{
   text-transform: uppercase;
 }
 
-.input {
-  background-color: white;
-  width: 373px;
-  height: 37px;
-}
+
 
 .input__error {
   border: 2px solid red;

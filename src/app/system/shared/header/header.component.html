@@ -17,7 +17,91 @@
       </ul>
     </div>
     <div class="col-md-2">
-      <button type="button" class="button__account"><span><img src="../../../../assets/pictures/home/carAccount.png">Личный кабинет</span></button>
+      <button type="button" class="button__account" data-bs-toggle="modal" data-bs-target="#windowLogIn"><span><img src="../../../../assets/pictures/home/carAccount.png">Личный кабинет</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="windowLogIn" tabindex="-1" aria-labelledby="windowLogIn" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" id="background__login">
+      <h5 class="modal-title">Вход</h5>
+      <form>
+        <div class="modal-body">
+          <div class="form-group">
+            <label id="email__login" required>e-mail</label>
+            <input type="text" />
+          </div>
+          <div class="form-group">
+            <label id="password__login" required>Пароль</label>
+            <input type="password"/>
+          </div>
+        </div>
+        <button type="button" id="button__login" (click)="toPage('/personal-account-client')">Войти
+        </button>
+      </form>
+      <p id="text__login">У меня еще нет аккаунта, <a data-bs-target="#windowRegistration" data-bs-toggle="modal">зарегистрироваться.</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="windowRegistration" tabindex="-1" aria-labelledby="windowRegistration" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" id="background__registration">
+      <h5 class="modal-title" id="registration__text">Регистрация</h5>
+      <form #form="ngForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label id="name__registration">Имя</label>
+            <input type="name" ngModel name="userName" required id="" class="input__text" id="input__nmregistration"/>
+          </div>
+          <div class="form-group" [ngModel]="{'has-error': email.invalid && email.touched}">
+            <label id="email__registration">e-mail</label>
+            <input type="email" ngModel name="userEmail" required email #email="ngModel" class="input__text"
+                   id="input__emregistration"/>
+            <p *ngIf="email.invalid && email.touched">Введите корректный email.</p>
+          </div>
+          <div class="form-group" [ngModel]="{'has-error': password.invalid && password.touched}">
+            <label id="password__registration">Пароль</label>
+            <input type="password" ngModel name="userPassword" required minlength="6" #password="ngModel"
+                   class="input__text" id="input__pasregistration"/>
+            <p *ngIf="password.invalid && password.touched">Пароль должен содержать более 6 символов.</p>
+          </div>
+          <div class="form-group"
+               [ngModel]="{'has-error': (password.value !== confirmedPassword.value) && (confirmedPassword.touched)}">
+            <label id="confpassword__registration">Введите пароль еще раз</label>
+            <input type="password" ngModel name="userConfirmedPassword" required minlength="6"
+                   #confirmedPassword="ngModel" class="input__text" id="input__cpasregistration"/>
+            <p *ngIf="(password.value !== confirmedPassword.value) && (confirmedPassword.touched)">Пароли не
+              совпадают.</p>
+          </div>
+        </div>
+        <button type="button" id="button__registration" data-bs-toggle="modal" data-bs-target="#windowCode"
+                [disabled]="(!form.valid) || (password.value !== confirmedPassword.value)">Далее
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="windowCode" tabindex="-1" aria-labelledby="windowCode" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" id="background__code">
+      <h5 class="modal-title" id="registrationText">Регистрация</h5>
+      <form #formCode="ngForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label id="label__code">Введите код высланный на ваш e-mail</label>
+            <input type="code" ngModel name="code" required id="input__code"/>
+            <p>Введённый код-неверный.</p>
+          </div>
+        </div>
+        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')" [disabled]="!formCode.valid">
+          Зарегистрироваться
+        </button>
+      </form>
     </div>
   </div>
 </div>

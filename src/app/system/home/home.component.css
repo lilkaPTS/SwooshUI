@@ -1,7 +1,7 @@
-.home {
-  background: url("../../../assets/pictures/home/Vector.png") 99px no-repeat,
-                    url("../../../assets/pictures/home/rectangle.png"),
-                    url("../../../assets/pictures/home/background.jpg");
+#home {
+  background: url("../../../assets/pictures/home/Vector.png") 0px 0px no-repeat,
+  url("../../../assets/pictures/home/rectangle.png") 0px 0px no-repeat,
+  url("../../../assets/pictures/home/background.jpg") no-repeat;
   /*background-repeat: no-repeat;*/
   background-size: cover;
   height: 100vh;
@@ -34,6 +34,7 @@
   font-weight: 700;
   color: var(--accent);
 }
+
 .button {
   margin-top: 48px;
   width: 269px;
@@ -49,12 +50,31 @@
 
 .other__information {
   margin-top: 39px;
-  position: absolute;
 }
 .other__information p {
   font-weight: 400;
   font-size: 14px;
 }
-.other__information span {
+
+#advantages {
+  background-color: var(--dark);
+  width: 100vw;
   position: relative;
+  background-image: url("../../../assets/pictures/home/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 538px;
+  margin-top: 276px;
+  margin-bottom: 303px;
+}
+
+#prices {
+  background-image: url("../../../assets/pictures/prices/backgroundPrices.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
 }

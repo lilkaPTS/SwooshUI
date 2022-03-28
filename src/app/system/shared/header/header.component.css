@@ -35,7 +35,7 @@
   padding: 0;
   list-style-type: none;
   display: inline-block;
-  margin: 0 60px;
+  margin: 0 40px;
 }
 .top-menu__link {
   color: #fff;
@@ -60,6 +60,7 @@
   width: 178px;
   height: 39px;
   margin-top: 26px;
+  margin-left: 43px;
   white-space: nowrap;
 }
 .button__account span {
@@ -67,3 +68,33 @@
   right: 40px;
 }
 
+.modal-dialog {
+  width: 516px;
+  height: 414px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#background__login {
+  background-image: url("../../../../assets/pictures/modal/Background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 516px;
+  height: 414px;
+  background-color:rgba(0,0,0,.9);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 139px var(--accent);
+  border: 0;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 70px;
+  font-size: 41px;
+  color: var(--accent);
+}
