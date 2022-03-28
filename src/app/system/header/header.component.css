@@ -1,0 +1,11 @@
+.container {
+  margin: 0px auto;
+  width: 1728px;
+  padding: 0px 146px;
+}
+
+.navbar {
+  position: absolute;
+  width: 100vw;
+  padding: 93px 0;
+}
