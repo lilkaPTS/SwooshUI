@@ -2,23 +2,30 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './system/header/header.component';
-import { HomeComponent } from './system/home/home.component';
-import { NotFoundComponent } from './system/not-found/not-found.component';
-import { PersonalAccountAdminComponent } from './system/personal-account-admin/personal-account-admin.component';
-import { PersonalAccountClientComponent } from './system/personal-account-client/personal-account-client.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {HomeComponent} from "./system/home/home.component";
+import {NotFoundComponent} from "./system/not-found/not-found.component";
+import {PersonalAccountClientComponent} from "./system/personal-account-client/personal-account-client.component";
+import {PersonalAccountAdminComponent} from "./system/personal-account-admin/personal-account-admin.component";
+import {HeaderComponent} from "./system/shared/header/header.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent,
     NotFoundComponent,
+    PersonalAccountClientComponent,
     PersonalAccountAdminComponent,
-    PersonalAccountClientComponent
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
