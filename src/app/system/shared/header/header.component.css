@@ -68,14 +68,18 @@
   right: 40px;
 }
 
-.modal-dialog {
+.modal  {
+  background:rgba(0,0,0,.4);
+  backdrop-filter: blur(7px);
+}
+
+#login {
   width: 516px;
   height: 414px;
   padding: 10px;
   margin-right: auto;
   margin-left: auto;
 }
-
 #background__login {
   background-image: url("../../../../assets/pictures/modal/Background2.png");
   background-size: cover;
@@ -89,7 +93,6 @@
   box-shadow: 0 4px 139px var(--accent);
   border: 0;
 }
-
 .modal-title {
   width: 100%;
   text-align: center;
@@ -97,4 +100,89 @@
   margin-top: 70px;
   font-size: 41px;
   color: var(--accent);
+}
+.button__modal {
+  width: 150px;
+  height: 47px;
+  margin: 23px 184px;
+  background-color: var(--accent);
+  box-shadow: 0px 4px 25px  var(--accent);
+  border-radius: 44px;
+  border: 0;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 20px;
+}
+#text__login {
+  text-align: center;
+  width: 100%;
+  margin-top: -10px;
+}
+#text__login span {
+  font-weight: 700;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+
+.form-group {
+  width: 375px;
+  margin-left: 72px;
+}
+.form-group label {
+  margin-top: 12px;
+}
+
+#registration {
+  width: 516px;
+  height: 507px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#background__registration {
+  background-image: url("../../../../assets/pictures/modal/Background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 516px;
+  height: 507px;
+  background-color:rgba(0,0,0,.9);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 139px var(--accent);
+  border: 0;
+}
+
+#code {
+  width: 516px;
+  height: 318px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#background__code{
+  background-image: url("../../../../assets/pictures/modal/Background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 516px;
+  height: 318px;
+  background-color:rgba(0,0,0,.9);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 139px var(--accent);
+  border: 0;
+}
+#button__code {
+  width: 303px;
+  height: 47px;
+  background: var(--accent);
+  box-shadow: 0px 4px 25px var(--accent);
+  border-radius: 44px;
+  border: 0;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 23px;
+  margin-left: 106px;
 }

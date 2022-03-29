@@ -7,11 +7,13 @@
           <p>Уникальные автомойки <span id="swoosh">swoosh</span><span
             id="yellow__text"> без очередей и головной боли.</span></p>
           <p>Попробуйте премиуим-уход за вашим автомобилем.</p>
-          <button type="button" class="button">Записаться ON-line</button>
-        <div class="other__information">
-          <p><img src="../../../assets/pictures/home/space.png">г. Нижний Новгород <br> офис: Белинского 32 а | Нижневолжская набережная 12</p>
-          <p><img src="../../../assets/pictures/home/phone.png">+7 908 165-54-65</p>
-        </div>
+          <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#windowNote">Записаться ON-line
+          </button>
+          <div class="other__information">
+            <p><img src="../../../assets/pictures/home/space.png">г. Нижний Новгород <br> офис: Белинского 32 а |
+              Нижневолжская набережная 12</p>
+            <p><img src="../../../assets/pictures/home/phone.png">+7 908 165-54-65</p>
+          </div>
         </div>
       </div>
     </div>
@@ -22,16 +24,64 @@
 <section id="advantages">
   <div class="container">
     <div class="row">
+      <div class="col-md-6">
+        <div class="advantage">
+          <div class="ellipse">
+            <img src="../../../assets/pictures/advantages/advantage1.png">
+          </div>
+          <h3>
+            Текст Текст Текст
+          </h3>
+          <p>
+            Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.
+          </p>
+        </div>
+        <div class="advantage">
+          <div class="ellipse">
+            <img src="../../../assets/pictures/advantages/advantage1.png">
+          </div>
+          <h3>
+            Текст Текст Текст
+          </h3>
+          <p>
+            Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.
+          </p>
+        </div>
+        <div class="advantage">
+          <div class="ellipse">
+            <img src="../../../assets/pictures/advantages/advantage1.png">
+          </div>
+          <h3>
+            Текст Текст Текст
+          </h3>
+          <p>
+            Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="big__ellipse">
+          <div class="middle__ellipse">
 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
 <section id="prices">
+  <h1 class="heading">Цены</h1>
   <div class="container">
     <div class="row">
-
+      <!-- <div class="col-lg-12">-->
+      <!--<div class="rectangle">
+        <img src="../../../assets/pictures/prices/yellowCar.png">
+        <span id="ellipse"></span>
+      </div>
+    </div>
+    <button type="button" class="button" id="button__price">Записаться ON-line</button>-->
     </div>
   </div>
 </section>
@@ -51,3 +101,52 @@
     </div>
   </div>
 </section>
+
+<!-- FORM NOTE -->
+<div class="modal fade" id="windowNote" tabindex="-1" aria-labelledby="windowNote" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" id="note">
+    <div class="modal-content" id="background__note">
+      <h5 class="modal-title">ON-line запись</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="form-group col-7">
+                <label>Телефон</label>
+                <input type="phone" class="form-control" formControlName="phone"/>
+              </div>
+              <div class="form-group col-7">
+                <label>Класс автомобиля</label>
+                <p><select name="class">
+                  <option></option>
+                </select></p>
+              </div>
+              <div class="form-group col-7">
+                <label>Услуга</label>
+                <p><select name="service">
+                  <option></option>
+                </select></p>
+              </div>
+              <div class="form-group col-7">
+                <label>Комментарий</label>
+                <input type="name" class="form-control" formControlName="comment"/>
+              </div>
+            </form>
+            <h1>Итого:</h1>
+            <p></p>
+          </div>
+          <div class="col-md-6">
+            <div style="position:relative;overflow:hidden;"><a
+              href="https://yandex.ru/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a><a
+              href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=44.005986%2C56.326887&utm_medium=mapframe&utm_source=maps&z=11"
+              style="color:#eee;font-size:12px;position:absolute;top:14px;"></a>
+              <iframe src="https://yandex.ru/map-widget/v1/-/CCQtRZwQkC" width="373" height="193" frameborder="1"
+                      allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

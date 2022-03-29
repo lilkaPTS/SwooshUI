@@ -1,10 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-/*@font-face {
-  font-family: Gilroy-ExtraBold;
-  src: url(../../../SwooshUI/SwooshUI/src/assets/fonts/Gilroy-ExtraBold.otf) format("truetype");
-  font-family: "Gilroy";
-  font-weight: ;
-}*/
+
 /*@font-face {
   font-family: Gilroy-Light;
   src: url(../../../SwooshUI/SwooshUI/src/assets/fonts/Gilroy-Light.otf) format("truetype");
@@ -42,6 +37,14 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(../../../SwooshUI/SwooshUI/src/assets/fonts/Gilroy-ExtraBold.otf) format("truetype");
+  font-family: "Gilroy-wt";
+  font-weight: 800;
+  font-style: normal;
+}
 @font-face {
   src: url(src/assets/fonts/Gilroy-Black.ttf) format("truetype");
   font-family: "Gilroy-wt";
@@ -65,6 +68,13 @@ body{
 }
 
 input {
+  background-color: white;
+  width: 373px;
+  height: 37px;
+  border-radius: 5px;
+}
+
+select{
   background-color: white;
   width: 373px;
   height: 37px;

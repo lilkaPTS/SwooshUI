@@ -68,6 +68,65 @@
   margin-top: 276px;
   margin-bottom: 303px;
 }
+.advantage {
+  margin-top: 19px;
+  width: 563px;
+  height: 142px;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+}
+.ellipse {
+  margin: 15px 32px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 4px 59px var(--accent);
+}
+.advantage img {
+  float: left;
+}
+.advantage h3 {
+  margin-top: 35px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 900;
+}
+.advantage p {
+  font-weight: 400;
+  line-height: var(--line-height);
+  font-size: var(--regular-text);
+}
+/*.big__ellipse {
+  Width: 612px;
+  Height: 612px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 4px 180px var(--accent);
+  margin-left: 35px;
+  z-index: 200;
+  position: relative;
+}
+.middle__ellipse {
+  width: 379px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(34, 34, 34, 0.48);
+  filter: blur(74px);
+  margin-left: 116px;
+  z-index: 230;
+}*/
+/*.heading {
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 48px;
+  font-weight: 900;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  padding: 141px 0;
+}*/
 
 #prices {
   background-image: url("../../../assets/pictures/prices/backgroundPrices.png");
@@ -76,5 +135,63 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-
 }
+/*
+.rectangle {
+  height: 586px;
+  border: 4px solid var(--accent);
+  border-radius: 25px;
+  margin-top: 238px;
+}
+.rectangle img {
+  margin: 321px 249px;
+  z-index: 120;
+}
+
+#ellipse {
+  z-index: 100;
+  width: 660px;
+  height: 383px;
+  background: rgba(246, 226, 43, 0.57);
+  filter: blur(227px);
+  margin: 0;
+}
+
+#button__price {
+  margin-left: 583px;
+}
+*/
+
+.modal {
+  background:rgba(0,0,0,.4);
+  backdrop-filter: blur(7px);
+}
+.modal-title {
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  margin-top: 70px;
+  font-size: 41px;
+  color: var(--accent);
+}
+#note {
+  width: 1078px;
+  height: 576px;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#background__note {
+  background-image: url("../../../assets/pictures/modal/Background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1078px;
+  height: 576px;
+  background-color:rgba(0,0,0,.9);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 139px var(--accent);
+  border: 0;
+}
+
