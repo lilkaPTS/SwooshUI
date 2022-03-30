@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 
 @Component({
@@ -15,7 +15,10 @@ export class HomeComponent implements OnInit {
   ) {
 
   }
-  ngOnInit(): void {
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      phone: new FormControl('', [Validators.required, Validators.minLength(2)])
+    });
   }
 
   onSubmit() {

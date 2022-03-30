@@ -67,11 +67,12 @@ body{
   background-color: var(--dark);
 }
 
-input {
+.input__modal{
   background-color: white;
   width: 373px;
   height: 37px;
   border-radius: 5px;
+  border: 0;
 }
 
 select{
