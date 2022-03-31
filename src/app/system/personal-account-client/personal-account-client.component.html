@@ -1,10 +1,76 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
+<section id="personal-account__client">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="personal__information">
 
-    </div>
-    <div class="col-md-6">
-
+        </div>
+        <div class="client__notes">
+          <h1>Мои записи</h1>
+          <div class="rectangle__client">
+            <button class="button__review" data-bs-toggle="modal" data-bs-target="#windowReview">Оставить отзыв</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="view__process">
+          <h1>Наблюдать за процессом</h1>
+          <div class="video">
+            <iframe width="632" height="364" src="https://www.youtube.com/embed/5g41cpe2d7M"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- FORM REVIEW -->
+  <div class="modal fade" id="windowReview" tabindex="-1" aria-labelledby="windowCode" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" id="code">
+      <div class="modal-content" id="background__review">
+        <h5 class="modal-title">Отзыв</h5>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="title__review">
+                  <img src="../../../assets/pictures/modal/logotip.png">
+                  <div class="text__review">
+                    <h3>Автомойка мир</h3>
+                    <button class="rectangle__address">Белинского 32а</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <form [formGroup]="form">
+                  <div class="form-group col-12">
+                    <h5>Поделитесь своими впечатлениями об этом месте</h5>
+                    <p><textarea></textarea></p>
+                    <div class="rating-area">
+                      <input type="radio" id="star-5" name="rating" value="5">
+                      <label for="star-5" title="Оценка «5»"></label>
+                      <input type="radio" id="star-4" name="rating" value="4">
+                      <label for="star-4" title="Оценка «4»"></label>
+                      <input type="radio" id="star-3" name="rating" value="3">
+                      <label for="star-3" title="Оценка «3»"></label>
+                      <input type="radio" id="star-2" name="rating" value="2">
+                      <label for="star-2" title="Оценка «2»"></label>
+                      <input type="radio" id="star-1" name="rating" value="1">
+                      <label for="star-1" title="Оценка «1»"></label>
+                    </div>
+                  </div>
+                  <button type="submit" id="button__save">
+                    Сохранить
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
