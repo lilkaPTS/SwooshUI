@@ -1,0 +1,166 @@
+#about-carwash {
+  background: url("../../../assets/pictures/modal/Background2.png") 0 0 no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+}
+
+.content {
+  margin-top: 485px;
+}
+
+.custom-radio {
+  width: 144px;
+  height: 35px;
+  background: var(--accent);
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--dark);
+  border: 0;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 71px;
+}
+
+
+.button__photo {
+  width: 202px;
+  height: 35px;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--dark);
+  border: 0;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 71px;
+}
+.rectangle {
+  width: 632px;
+  height: 195px;
+  left: 146px;
+  top: 485px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(9px);
+  border-radius: 25px;
+  margin-top: 25px;
+}
+
+.button__clientreview {
+  width: 72px;
+  height: 26px;
+  background: #F6E22B;
+  border-radius: 28px;
+  border: 0;
+}
+
+#content-1 {
+  overflow-y: scroll;
+  height: 435px;
+}
+
+#content-1::-webkit-scrollbar {
+  width: 13px;   /* ширина scrollbar */
+}
+
+#content-1::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+#content-1::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 22px;
+}
+
+.general {
+  float: left;
+  margin-top: 39px;
+  white-space: nowrap;
+}
+
+.ellipse {
+  width: 38px;
+  height: 38px;
+  background: #C4C4C4;
+  border-radius: 50%;
+  margin-left: 41px;
+}
+
+.reviews h3 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-left: 23px;
+
+}
+
+.tabs {
+  margin-top: 423px;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tabs>input[type="radio"] {
+  width: 202px;
+  height: 35px;
+  background: #FFFFFF;
+  border-radius: 50px;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  height: 35px;
+  background: #F6E22B;
+  border-radius: 50px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.tabs>div {
+  /* скрыть контент по умолчанию */
+  display: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+}
+
+.tabs>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #fff;
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+  border-radius: 50px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 71px;
+}
+
+.tabs>label:first-of-type {
+  margin-left: 0;
+}
+

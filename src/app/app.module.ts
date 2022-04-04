@@ -9,6 +9,7 @@ import {PersonalAccountClientComponent} from "./system/personal-account-client/p
 import {PersonalAccountAdminComponent} from "./system/personal-account-admin/personal-account-admin.component";
 import {HeaderComponent} from "./system/shared/header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AboutCarwashComponent } from './system/about-carwash/about-carwash.component';
 
 
 
@@ -19,7 +20,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     NotFoundComponent,
     PersonalAccountClientComponent,
     PersonalAccountAdminComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutCarwashComponent
   ],
   imports: [
     BrowserModule,

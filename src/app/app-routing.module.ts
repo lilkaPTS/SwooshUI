@@ -3,6 +3,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./system/home/home.component";
 import {PersonalAccountClientComponent} from "./system/personal-account-client/personal-account-client.component";
 import {PersonalAccountAdminComponent} from "./system/personal-account-admin/personal-account-admin.component";
+import {AboutCarwashComponent} from "./system/about-carwash/about-carwash.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'personal-account-admin',
     component: PersonalAccountAdminComponent
+  },
+  {
+    path: 'about-carwash',
+    component: AboutCarwashComponent
   },
   {
     path: '**',
