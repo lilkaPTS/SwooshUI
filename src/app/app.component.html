@@ -2,3 +2,78 @@
 
 <router-outlet></router-outlet>
 
+<!-- FORM NOTE -->
+<div class="modal__window">
+<div class="modal fade" id="windowNote" tabindex="-1" aria-labelledby="windowNote" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" id="note">
+    <div class="modal-content" id="background__note">
+      <h5 class="modal-title">ON-line <span>запись</span></h5>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6" id="modal__note">
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-group col-7">
+                  <label>Телефон</label>
+                  <input type="phone" class="form-control" formControlName="phone" class="input__modal"/>
+                </div>
+                <div class="form-group col-7">
+                  <label>Класс автомобиля</label>
+                  <p><select name="class">
+                    <option></option>
+                    <option>Класс А</option>
+                    <option>Класс B</option>
+                    <option>Класс C</option>
+                    <option>Класс D</option>
+                    <option>Класс E</option>
+                    <option>Класс F</option>
+                    <option>Класс G</option>
+                    <option>Класс H</option>
+                  </select></p>
+                </div>
+                <div class="form-group col-7">
+                  <label>Услуга</label>
+                  <p><select name="service">
+                    <option></option>
+                    <option>Химчистка</option>
+                  </select></p>
+                </div>
+                <div class="form-group col-7">
+                  <label>Комментарий</label>
+                  <input type="name" formControlName="comment" class="input__modal"/>
+                </div>
+              </form>
+              <h1>Итого:</h1>
+              <p id="price__service">0 руб</p>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1"> Я согласен с Политикой
+                  конфиденциальности и правилами пользования online-записью, ознакомлен, что конечная сумма может
+                  варьироваться в зависимости от пожеланий в соответствии с прайс-листом SWOOSH.</label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="title__note">
+                <button type="button">Белинского 32а</button>
+                <img src="../../../assets/pictures/modal/logotip.png">
+              </div>
+              <div class="map">
+                <div style="position:relative;overflow:hidden;"><a
+                  href="https://yandex.ru/maps/47/nizhny-novgorod/?utm_medium=mapframe&utm_source=maps"
+                  style="color:#eee;font-size:12px;position:absolute;top:0px;">Нижний Новгород</a><a
+                  href="https://yandex.ru/maps/47/nizhny-novgorod/?ll=44.005986%2C56.326887&utm_medium=mapframe&utm_source=maps&z=11"
+                  style="color:#eee;font-size:12px;position:absolute;top:14px;"></a>
+                  <iframe src="https://yandex.ru/map-widget/v1/-/CCQtRZwQkC" width="373" height="193" frameborder="1"
+                          allowfullscreen="true" style="position:relative;border-radius: 5px;"></iframe>
+                </div>
+              </div>
+              <button type="button" class="button__note" [disabled]="form.invalid">Записаться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -75,6 +75,40 @@
   border-radius: 22px;
 }
 
+#content-2 {
+  overflow-y: scroll;
+  height: 435px;
+}
+
+#content-2::-webkit-scrollbar {
+  width: 13px;   /* ширина scrollbar */
+}
+
+#content-2::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+#content-2::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 22px;
+}
+
+#content-3 {
+  overflow-y: scroll;
+  height: 435px;
+}
+
+#content-3::-webkit-scrollbar {
+  width: 13px;   /* ширина scrollbar */
+}
+
+#content-3::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+#content-3::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 22px;
+}
+
 .general {
   float: left;
   margin-top: 39px;
@@ -164,3 +198,75 @@
   margin-left: 0;
 }
 
+.photo__row1 {
+  height: 196px;
+  margin-bottom: 14px;
+}
+
+.photo__row1 img {
+  margin-right: 20px;
+}
+
+.photo__row2 {
+  height: 301px;
+  margin-bottom: 14px;
+}
+
+.photo__row2 img {
+  float: left;
+  margin-bottom: 14px;
+  margin-right: 20px;
+}
+
+.price h3 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.price span {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 41px;
+}
+
+.price hr {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.71);
+}
+
+.price__carwash {
+  width: 160px;
+  float: right;
+}
+
+.about__carwash {
+  width: 350px;
+  float: left;
+}
+
+.map {
+  margin-top: 485px;
+  float: right;
+}
+
+.button {
+  margin-top: 50px;
+  width: 269px;
+  height: 47px;
+  background: var(--accent);
+  box-shadow: 0 4px 25px #F6E22B;
+  border-radius: 44px;
+  color: var(--dark);
+  border: 0;
+  font-weight: 700;
+  font-size: 23px;
+  float: right;
+}
