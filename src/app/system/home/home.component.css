@@ -152,22 +152,15 @@
   border: 4px solid var(--accent);
   border-radius: 25px;
   margin-top: 238px;
+  z-index: 100;
 }
 .rectangle img {
   margin: 321px 249px;
-  z-index: 120;
+  z-index: 250;
   width: 937px;
   height: 384px;
 }
 
-#ellipse {
-  z-index: 100;
-  width: 660px;
-  height: 383px;
-  background: rgba(246, 226, 43, 0.57);
-  filter: blur(227px);
-  margin: 0;
-}
 
 #button__price {
   margin-left: 583px;

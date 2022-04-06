@@ -39,23 +39,14 @@
   text-transform: uppercase;
   margin-right: 71px;
 }
+
 .rectangle {
   width: 632px;
   height: 195px;
-  left: 146px;
-  top: 485px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(9px);
   border-radius: 25px;
   margin-top: 25px;
-}
-
-.button__clientreview {
-  width: 72px;
-  height: 26px;
-  background: #F6E22B;
-  border-radius: 28px;
-  border: 0;
 }
 
 #content-1 {
@@ -110,8 +101,6 @@
 }
 
 .general {
-  float: left;
-  margin-top: 39px;
   white-space: nowrap;
 }
 
@@ -121,6 +110,43 @@
   background: #C4C4C4;
   border-radius: 50%;
   margin-left: 41px;
+  float: left;
+  margin-top: 39px;
+}
+
+.about__client p {
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--dark);
+  float: left;
+  margin-left: 23px;
+  margin-top: 34px;
+}
+
+.about__client span {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--dark);
+  display: block;
+}
+
+.button__clientreview {
+  width: 72px;
+  height: 26px;
+  background: #F6E22B;
+  border-radius: 28px;
+  border: 0;
+  float: left;
+  margin-left: 37px;
+  margin-top: 34px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--dark);
 }
 
 .reviews h3 {
@@ -158,6 +184,8 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .tabs>div {
@@ -181,7 +209,6 @@
   user-select: none;
   background-color: #fff;
   border: 1px solid transparent;
-  padding: 2px 8px;
   font-weight: 900;
   font-size: 24px;
   line-height: 30px;
@@ -192,6 +219,8 @@
   cursor: pointer;
   margin-bottom: 10px;
   margin-right: 71px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .tabs>label:first-of-type {
@@ -269,4 +298,31 @@
   font-weight: 700;
   font-size: 23px;
   float: right;
+}
+
+#logo {
+  margin-top: 255px;
+  width: 122px;
+  height: 122px;
+  float: left;
+}
+
+.head p {
+  width: 210px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  float: left;
+  white-space: nowrap;
+  margin-top: 286px;
+  margin-left: 40px;
+}
+
+.head span {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  display: block;
 }
