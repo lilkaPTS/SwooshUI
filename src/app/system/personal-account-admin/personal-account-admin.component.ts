@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-personal-account-admin',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalAccountAdminComponent implements OnInit {
 
-  constructor() { }
+  count: number = 11;
+
+  onClick(numb: number) {
+    this.count = numb;
+  }
+
+  form!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
   }

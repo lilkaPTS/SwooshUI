@@ -10,6 +10,9 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 export class AppComponent {
   form!: FormGroup;
 
+  date1!: Date;
+  date2!: Date;
+
   constructor(
     private router: Router,
     private formBuilder: FormBuilder
@@ -24,7 +27,9 @@ export class AppComponent {
     this.form = this.formBuilder.group({
       phone: new FormControl('', [Validators.required, Validators.minLength(2)])
     });
+    this.date1 = new Date();
   }
+
 
   onSubmit() {
 

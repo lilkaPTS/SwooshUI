@@ -84,7 +84,7 @@
             <label>Введите код высланный на ваш e-mail</label>
             <input type="code" formControlName="code" class="input__modal"/>
           </div>
-        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')" [disabled]="form.invalid">
+        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')" [disabled]="form.invalid" data-bs-dismiss="modal">
           Зарегистрироваться
         </button>
       </form>

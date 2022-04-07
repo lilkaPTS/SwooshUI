@@ -1,1 +1,537 @@
-<p>personal-account-admin works!</p>
+<section id="personal-account__admin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="personal-account__administration">
+          <h1>Личный кабинет администратора</h1>
+        </div>
+
+        <div class="add-wash__wrap">
+          <div class="add-wash">
+            <button type="button" class="button__add-wash" (click)="onClick(11)"><img
+              src="../../../assets/pictures/paa/plus.png" class="add-wash-pic">Добавить автомойку
+            </button>
+          </div>
+        </div>
+
+        <div class="car-wash__wrap">
+          <div class="car-wash">
+            <!-- Ул. Белинского 32а -->
+            <div class="btn-group dropend">
+              <button type="button" class="button__wash dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="false"><img src="../../../assets/pictures/paa/vector.png" class="rightpic">
+                Ул. Белинского 32а
+              </button>
+              <ul class="dropdown-menu">
+                <button type="button" class="dropdown-item" (click)="onClick(1)">Статистика по сотрудникам</button>
+                <button type="button" class="dropdown-item" (click)="onClick(2)">Статистика по клиентам</button>
+              </ul>
+            </div>
+            <!-- Верхневожская наб. 14 -->
+            <div class="btn-group dropend">
+              <button type="button" class="button__wash dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="false"><img src="../../../assets/pictures/paa/vector.png" class="rightpic">
+                Верхневожская наб. 14
+              </button>
+              <ul class="dropdown-menu">
+                <button type="button" class="dropdown-item" (click)="onClick(3)">Статистика по сотрудникам</button>
+                <button type="button" class="dropdown-item" (click)="onClick(4)">Статистика по клиентам</button>
+              </ul>
+            </div>
+            <!-- Мещерский бульвар 5 -->
+            <div class="btn-group dropend">
+              <button type="button" class="button__wash dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="false"><img src="../../../assets/pictures/paa/vector.png" class="rightpic">
+                Мещерский бульвар 5
+              </button>
+              <ul class="dropdown-menu">
+                <button type="button" class="dropdown-item" (click)="onClick(5)">Статистика по сотрудникам</button>
+                <button type="button" class="dropdown-item" (click)="onClick(6)">Статистика по клиентам</button>
+              </ul>
+            </div>
+            <!-- Комсомольская пл. 2а -->
+            <div class="btn-group dropend">
+              <button type="button" class="button__wash dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="false"><img src="../../../assets/pictures/paa/vector.png" class="rightpic">
+                Комсомольская пл. 2а
+              </button>
+              <ul class="dropdown-menu">
+                <button type="button" class="dropdown-item" (click)="onClick(7)">Статистика по сотрудникам</button>
+                <button type="button" class="dropdown-item" (click)="onClick(8)">Статистика по клиентам</button>
+              </ul>
+            </div>
+            <!-- ул. Родионова 14 -->
+            <div class="btn-group dropend">
+              <button type="button" class="button__wash dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="false"><img src="../../../assets/pictures/paa/vector.png" class="rightpic">
+                ул. Родионова 14
+              </button>
+              <ul class="dropdown-menu">
+                <button type="button" class="dropdown-item" (click)="onClick(9)">Статистика по сотрудникам</button>
+                <button type="button" class="dropdown-item" (click)="onClick(10)">Статистика по клиентам</button>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="rectangle__admin">
+          <div class="logo"><img src="../../../assets/pictures/paa/logo.png"></div>
+          <div [ngSwitch]="count">
+            <div>
+              <!-- Статистика по сотрудникам -->
+              <div *ngSwitchCase="1">
+                <div class="stat">
+                  <h1>Статистика по сотрудникам</h1>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="empSelect">
+                        <p>Выбор сотрудника</p>
+                        <div class="formSelect">
+                          <select class="empSelect form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Иванов Иван Иванович</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="perSelect">
+                        <p>Выбор периода</p>
+                        <div class="datePicker">
+                          <button type="button" class="button__datePicker">Выберите период</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="completed-orders">
+                        <div class="ellipse">
+                          <img src="../../../assets/pictures/paa/lock.png">
+                          <div class="completed-orders__numb">112</div>
+                          <div class="lock">
+                            <!-- <img src="../../../assets/pictures/paa/lock.png"> -->
+                          </div>
+                        </div>
+                        <div class="caption">Количество выполненных заказов</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="quality-score">
+                        <div class="ellipse">
+                          <img src="../../../assets/pictures/paa/doge.png">
+                          <div class="quality-score__numb">4.8</div>
+                          <div class="doge">
+                            <!-- <img src="../../../assets/pictures/paa/doge.png"> -->
+                          </div>
+                        </div>
+                        <div class="caption">Средняя оценка качества</div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="return">
+                        <div class="ellipse">
+                          <img src="../../../assets/pictures/paa/diag.png">
+                          <div class="return__percent">53%</div>
+                          <div class="diag">
+                            <!-- <img src="../../../assets/pictures/paa/diag.png"> -->
+                          </div>
+                        </div>
+                        <div class="caption">Возвращаемость</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Статистика по клиентам -->
+              <div *ngSwitchCase="2">
+                <div class="stat">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <div class="total">Всего:</div>
+                    </div>
+                    <div class="col-md-6">
+                      <div><h1>Статистика по клиентам</h1></div>
+                    </div>
+                    <div class="col-md-4">
+                      <!-- <div class="search-client"><button type="button" class="button__datePicker">Поиск</button></div> -->
+                      <div class="search-client"><input type="text" class="button__datePicker" placeholder="Поиск">
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="stat-client"><h3>Имя</h3></div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stat-client"><h3>Телефон</h3></div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stat-client"><h3>Кол-во посещений</h3></div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="stat-client"><h3>Средний чек</h3></div>
+                    </div>
+                  </div>
+                  <div class="client-list">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="client-info">Иван</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="client-info">8-908-608-17-33</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="client-info">4</div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="client-info-end">5600</div>
+                      </div>
+                    </div>
+                    <!-- <button type="button" class="button__client-info">Поиск</button> -->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div *ngSwitchCase="3">
+                <div class="stat">
+                  <h1>Статистика по сотрудникам</h1>
+                </div>
+              </div>
+
+              <div *ngSwitchCase="4">
+                <div class="stat">
+                  <h1>Статистика по клиентам</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div *ngSwitchCase="5">
+                <div class="stat">
+                  <h1>Статистика по сотрудникам</h1>
+                </div>
+              </div>
+
+              <div *ngSwitchCase="6">
+                <div class="stat">
+                  <h1>Статистика по клиентам</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div *ngSwitchCase="7">
+                <div class="stat">
+                  <h1>Статистика по сотрудникам</h1>
+                </div>
+              </div>
+
+              <div *ngSwitchCase="8">
+                <div class="stat">
+                  <h1>Статистика по клиентам</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div>
+
+              <div *ngSwitchCase="9">
+                <div class="stat">
+                  <h1>Статистика по сотрудникам</h1>
+                </div>
+              </div>
+
+              <div *ngSwitchCase="10">
+                <div class="stat">
+                  <h1>Статистика по клиентам</h1>
+                </div>
+              </div>
+
+            </div>
+
+            <div *ngSwitchDefault>
+              <div></div>
+            </div>
+            <!-- Добавление автомойки (общие сведения) -->
+            <div *ngSwitchCase="11">
+              <div class="window__add-wash">
+                <div class="header__add-wash">
+                  <h1>Добавление автомойки</h1>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="button__gen-info__wrap">
+                        <button type="button" class="button__gen-info-active" (click)="onClick(11)">Общие сведения
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="button__service__wrap">
+                        <button type="button" class="button__service" (click)="onClick(12)">Услуги</button>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="button__workers__wrap">
+                        <button type="button" class="button__workers" (click)="onClick(13)">Сотрудники</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="gen-info">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="add-wash__form">
+                        <div class="name__wrap">
+                          <div class="name">Название</div>
+                          <input type="text" class="form-control" placeholder="Название" aria-label="Имя пользователя"
+                                 aria-describedby="addon-wrapping">
+                        </div>
+                        <div class="address__wrap">
+                          <div class="address">Адрес</div>
+                          <input type="text" class="form-control" placeholder="Адрес" aria-label="Имя пользователя"
+                                 aria-describedby="addon-wrapping">
+                        </div>
+                        <div class="telephone__wrap">
+                          <div class="telephone">Телефон</div>
+                          <input type="text" class="form-control" placeholder="Телефон" aria-label="Имя пользователя"
+                                 aria-describedby="addon-wrapping">
+                        </div>
+                        <div class="add-photo">
+                          <li class="">Добавить фотографии<input type="file"></li>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="add-logo">
+                        <a><img src="../../../assets/pictures/paa/add_logo.png" alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Добавление автомойки (услуги) -->
+            <div *ngSwitchCase="12">
+              <div class="window__add-wash">
+                <div class="header__add-wash">
+                  <h1>Добавление автомойки</h1>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="button__gen-info__wrap">
+                        <button type="button" class="button__gen-info" (click)="onClick(11)">Общие сведения</button>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="button__service__wrap">
+                        <button type="button" class="button__service-active" (click)="onClick(12)">Услуги</button>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="button__workers__wrap">
+                        <button type="button" class="button__workers" (click)="onClick(13)">Сотрудники</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="new-service">
+                  <a class="button__new-service" data-bs-toggle="modal" data-bs-target="#windowAddService"><img
+                    src="../../../assets/pictures/paa/plus-min.png" class="new-service-pic">Новая услуга</a>
+                </div>
+                <div class="add-service__header">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="add-service">Наименование</div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="add-service">Класс</div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="add-service">Продолжительность</div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="add-service">Стоимость</div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="new-service-info">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="service">Детейлинг химчистка</div>
+
+                    </div>
+                    <div class="col-md-2">
+                      <div class="service">С</div>
+
+                    </div>
+                    <div class="col-md-3">
+                      <div class="service">2 часа</div>
+
+                    </div>
+                    <div class="col-md-3">
+                      <div class="service-end">13 000 руб.</div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Добавление автомойки (сотрудники) -->
+            <div *ngSwitchCase="13">
+              <div class="window__add-wash">
+                <div class="header__add-wash">
+                  <h1>Добавление автомойки</h1>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <div class="button__gen-info__wrap">
+                        <button type="button" class="button__gen-info" (click)="onClick(11)">Общие сведения</button>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="button__service__wrap">
+                        <button type="button" class="button__service" (click)="onClick(12)">Услуги</button>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="button__workers__wrap">
+                        <button type="button" class="button__workers-active" (click)="onClick(13)">Сотрудники</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="new-emp">
+                  <a class="button__new-emp" data-bs-toggle="modal" data-bs-target="#windowAddEmp"><img
+                    src="../../../assets/pictures/paa/plus-min.png" class="new-emp-pic">Новый сотрудник</a>
+                </div>
+                <div class="add-emp__header">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="add-emp">ФИО</div>
+
+                    </div>
+                    <div class="col-md-3">
+                      <div class="add-emp">Телефон</div>
+
+                    </div>
+                    <div class="col-md-5">
+                      <div class="add-emp">Выполняемые услуги</div>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="new-emp-info">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="employee">Иванов Илья Васильевич</div>
+
+                    </div>
+                    <div class="col-md-3">
+                      <div class="employee">8-908-608-17-33</div>
+
+                    </div>
+                    <div class="col-md-5">
+                      <div class="employee-service-end">Детейлинг химчистка, детейлинг автомойка, антидождь</div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FORM ADD-SERVICE -->
+  <div class="modal fade" id="windowAddService" tabindex="-1" aria-labelledby="windowAddService" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" id="AddService">
+      <div class="modal-content" id="background__addService">
+        <h5 class="modal-title">Новая услуга</h5>
+        <form [formGroup]="form">
+          <div class="form-group col-7">
+            <label>Наименование</label>
+            <input type="text" formControlName="email" class="input__modal"/>
+          </div>
+          <div class="form-group col-7">
+              <label>Класс</label>
+              <select name="class">
+                <option>Класс А</option>
+                <option>Класс B</option>
+                <option>Класс C</option>
+                <option>Класс D</option>
+                <option>Класс E</option>
+                <option>Класс F</option>
+                <option>Класс G</option>
+                <option>Класс H</option>
+              </select>
+          </div>
+          <div class="form-group col-7">
+            <label>Продолжительность</label>
+            <select name="class">
+              <option>30 мин</option>
+              <option>50 мин</option>
+            </select>
+          </div>
+          <div class="form-group col-7">
+            <label>Стоимость</label>
+            <input type="text" class="input__modal"/>
+          </div>
+          <button type="button" class="button__modal" aria-label="Закрыть" data-bs-dismiss="modal">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM ADD-EMPLOYEE -->
+  <div class="modal fade" id="windowAddEmp" tabindex="-1" aria-labelledby="windowAddEmp" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" id="AddEmp">
+      <div class="modal-content" id="background__addEmp">
+        <h5 class="modal-title">Новый сотрудник</h5>
+        <form [formGroup]="form">
+          <div class="form-group col-7">
+            <label>ФИО</label>
+            <input type="text" class="input__modal"/>
+          </div>
+          <div class="form-group col-7">
+            <label>Телефон</label>
+            <input type="password" class="input__modal"/>
+          </div>
+          <div class="form-group col-7">
+            <label>Выполняемые услуги</label>
+            <input type="text" class="input__modal"/>
+          </div>
+          <button type="button" class="button__modal">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
