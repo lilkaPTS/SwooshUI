@@ -3,10 +3,22 @@
   url("../../../assets/pictures/home/rectangle.png") 0px 0px no-repeat,
   url("../../../assets/pictures/home/background.jpg") no-repeat;
   /*background-repeat: no-repeat;*/
-  height: 100vh;
+  height: 1117px;
   width: 100vw;
   position: relative;
   background-size: cover;
+}
+
+#home:before {
+  content: '';
+  background: url("../../../assets/pictures/home/yellowCar.png") 0 0 no-repeat;
+  width: 890px;
+  height: 511px;
+  position: absolute;
+  top: 426px;
+  right: -50px;
+  overflow-y: hidden;
+  z-index: 20;
 }
 
 .main {
@@ -144,7 +156,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 1117px;
   position: relative;
 }
 .rectangle {
@@ -164,20 +176,70 @@
 
 #button__price {
   margin-left: 583px;
+  margin-top: 119px;
 }
 
 
 #reviews {
   background-color: var(--dark);
-  height: 100vh;
+  height: 1117px;
   width: 100vw;
 }
 
 #faq {
-  background: url("../../../assets/pictures/home/background.jpg") no-repeat;
-  height: 100vh;
+  background:  linear-gradient( rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8) ), url("../../../assets/pictures/modal/Background2.png") no-repeat;
+  height: 1117px;
   width: 100vw;
   position: relative;
   background-size: cover;
 }
+
+.rectangle__faq {
+  width: 1436px;
+  height: 567px;
+  margin-top: 227px;
+  background: linear-gradient(252.66deg, #FFFFFF 5.09%, #EEEDED 112.38%);
+  box-shadow: 0 4px 52px var(--accent);
+  border-radius: 20px;
+}
+
+.ellipse__faq {
+  width: 288px;
+  height: 289px;
+  background: linear-gradient(210.12deg, #F6E22B 7.52%, #BB9D00 143.91%);
+  box-shadow: 0px 4px 180px #F6E22B;
+  margin-top: 185px;
+  margin-left: -77px;
+  border-radius: 50%;
+}
+
+.rectangle__faq img {
+  width: 715px;
+  height: 636px;
+  margin-top: -233px;
+  margin-left: 21px;
+}
+
+/*.text__faq {
+  margin-left: 604px;
+  width: 250px;
+  white-space: nowrap;
+}
+
+.text__faq img {
+  float: left;
+  width: 28px;
+  height: 28px;
+}
+
+.text__faq h3 {
+  float: left;
+  margin-left: 14px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: var(--dark);
+}*/
+
 
