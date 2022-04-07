@@ -3,29 +3,11 @@
   url("../../../assets/pictures/home/Vector.png") 0px 0px no-repeat,
   url("../../../assets/pictures/home/rectangle.png") 0px 0px no-repeat,
   url("../../../assets/pictures/home/background.jpg") no-repeat;
-  /*background-repeat: no-repeat;*/
   height: 1117px;
   width: 100vw;
   position: relative;
   background-size: 1501px 934px, cover, cover, cover;
 }
-
-
-/*
-#home:before {
-  content: '';
-  background: url("../../../assets/pictures/home/yellowCar.png") 0 0 no-repeat,
-  url("../../../assets/pictures/home/blackEllipse.png") 0 0 no-repeat;
-  background-size: 890px 511px, 2015px 710px;
-  width: 890px;
-  height: 511px;
-  position: absolute;
-  top: 426px;
-  right: -50px;
-  overflow-y: hidden;
-  z-index: 20;
-}
-*/
 
 .main {
   padding: 319px 0;
@@ -361,7 +343,7 @@
   position: absolute;
   overflow: hidden;
   font-weight: 400;
-  font-size: 16px;
+  max-font-size: 16px;
   line-height: 19px;
   margin: 174px 36px;
   white-space: normal;
