@@ -21,7 +21,7 @@ import { AboutCarwashComponent } from './system/about-carwash/about-carwash.comp
     PersonalAccountClientComponent,
     PersonalAccountAdminComponent,
     HeaderComponent,
-    AboutCarwashComponent
+    AboutCarwashComponent,
   ],
   imports: [
     BrowserModule,

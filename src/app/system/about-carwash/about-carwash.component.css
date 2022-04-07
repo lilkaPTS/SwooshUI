@@ -134,6 +134,17 @@
   display: block;
 }
 
+.textclient__review p {
+  position: absolute;
+  left: 41px;
+  top: 105px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--dark);
+  width: 550px;
+}
+
 .button__clientreview {
   width: 72px;
   height: 26px;
@@ -282,7 +293,7 @@
 }
 
 .map {
-  margin-top: 485px;
+  margin-top: 140px;
   float: right;
 }
 
@@ -325,4 +336,48 @@
   line-height: 30px;
   text-transform: uppercase;
   display: block;
+}
+
+.info {
+  margin-top: 278px;
+  height: 50px;
+  width: 245px;
+  float: right;
+}
+
+.info img {
+  float: right;
+}
+
+.info p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  margin-right: 25px;
+  width: 210px;
+}
+
+#phone {
+  margin-top: 23px;
+  text-align: right;
+  float: right;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.pin {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  width: 15px;
+  height: 15px;
+  border: 10px solid #f75850;
+  box-shadow:-2px 2px 2px 0px #aaa;
+  border-radius:50% 50% 50% 0;
+  transform: rotate(-45deg);
+  z-index: 500;
 }
