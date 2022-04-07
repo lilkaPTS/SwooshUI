@@ -36,10 +36,6 @@
   position: relative;
 }
 
-.form-group label {
-  margin-top: 12px;
-}
-
 #modal__note h1 {
   text-transform: uppercase;
   font-size: 53px;
@@ -156,4 +152,16 @@
   font-weight: 700;
   font-size: 23px;
   border: 0;
+}
+
+select{
+  background-color: white;
+  width: 373px;
+  height: 37px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.form-group {
+  margin-top: 12px;
 }

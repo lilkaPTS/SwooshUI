@@ -76,12 +76,6 @@ body{
   border: 0;
 }
 
-select{
-  background-color: white;
-  width: 373px;
-  height: 37px;
-  border-radius: 5px;
-}
 
 
 @media (min-width: 1200px) {

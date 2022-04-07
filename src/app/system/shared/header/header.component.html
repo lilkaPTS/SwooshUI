@@ -67,7 +67,7 @@
             <label>Введите пароль еще раз</label>
             <input type="password"  class="form-control" formControlName="confirmedPassword" class="input__modal"/>
           </div>
-        <button type="submit" class="button__modal" data-bs-toggle="modal" data-bs-target="#windowCode" [disabled]="form.invalid && !isConfirmedPassword()">Далее
+        <button type="submit" class="button__modal" data-bs-toggle="modal" data-bs-target="#windowCode" [disabled]="form.invalid || !isConfirmedPassword()">Далее
         </button>
       </form>
     </div>
@@ -84,7 +84,7 @@
             <label>Введите код высланный на ваш e-mail</label>
             <input type="code" formControlName="code" class="input__modal"/>
           </div>
-        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')">
+        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')" [disabled]="form.invalid">
           Зарегистрироваться
         </button>
       </form>

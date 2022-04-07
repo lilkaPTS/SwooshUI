@@ -1,14 +1,14 @@
 #home {
-  background: url("../../../assets/pictures/home/Vector.png") 0px 0px no-repeat,
+  background: url("../../../assets/pictures/home/backgroundWithCar.png") bottom right no-repeat,
+  url("../../../assets/pictures/home/Vector.png") 0px 0px no-repeat,
   url("../../../assets/pictures/home/rectangle.png") 0px 0px no-repeat,
   url("../../../assets/pictures/home/background.jpg") no-repeat;
   /*background-repeat: no-repeat;*/
   height: 1117px;
   width: 100vw;
   position: relative;
-  background-size: cover;
+  background-size: 1501px 934px, cover, cover, cover;
 }
-
 
 
 /*
@@ -325,6 +325,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  cursor: url(../../../assets/pictures/reviews/cursor.png), pointer;
 }
 
 .effects  img {
@@ -413,115 +414,8 @@
   border-radius: 20px;
 }
 
-
-
-
-/*
-.view {
-  float: left;
-  overflow: hidden;
-  text-align: center;
-}
-
-.view .mask {
-  height: 265px;
-  width: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.view img {
-  display: block;
-  position: relative;
-}
-
-.view h2 {
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 23px;
-  color: var(--dark);
-  position: relative;
-  margin: 141px 36px;
-}
-
-.view p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: var(--dark);
-  position: relative;
-  margin: 174px 36px;
-}
-
-.view a {
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  color: var(--dark);
-  margin: 229px 36px;
-}
-
-.view-first img {
-  transition: all 0.2s linear;
-}
-
-.view-first .mask {
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.view-first h2 {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
-.view-first p {
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-
-.view-first a {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
-.view-first:hover img {
-  background-color: #F6E22B;
-  border-radius: 20px;
-  opacity: 1;
-}
-
-.view-first:hover .mask {
-  opacity: 1;
-}
-
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a {
-  opacity: 1;
-}
-
-.view-first:hover p {
-  transition-delay: 0.1s;
-}
-
-.view-first:hover a {
-  transition-delay: 0.2s;
-}
-
-*/
-
-
-
-
-
 #faq {
-  background:  linear-gradient( rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8) ), url("../../../assets/pictures/modal/Background2.png") no-repeat;
+  background:  linear-gradient( rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7) ), url("../../../assets/pictures/modal/Background2.png") no-repeat;
   height: 1117px;
   width: 100vw;
   position: relative;
@@ -554,10 +448,9 @@
   margin-left: 21px;
 }
 
-/*.text__faq {
-  margin-left: 604px;
+.text__faq {
   width: 250px;
-  white-space: nowrap;
+  float: left;
 }
 
 .text__faq img {
@@ -566,14 +459,23 @@
   height: 28px;
 }
 
-.text__faq h3 {
+.text__faq p {
   float: left;
-  margin-left: 14px;
   font-weight: 900;
   font-size: 18px;
   line-height: 23px;
   text-transform: uppercase;
   color: var(--dark);
-}*/
+  margin-left: 14px;
+}
 
 
+.main__image {
+  position: absolute;
+}
+
+#button__faq {
+  margin-left: 583px;
+  margin-top: 119px;
+  z-index: 500;
+}

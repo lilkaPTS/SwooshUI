@@ -368,16 +368,3 @@
   color: #FFFFFF;
   position: relative;
 }
-
-.pin {
-  position: absolute;
-  top: 150px;
-  left: 250px;
-  width: 15px;
-  height: 15px;
-  border: 10px solid #f75850;
-  box-shadow:-2px 2px 2px 0px #aaa;
-  border-radius:50% 50% 50% 0;
-  transform: rotate(-45deg);
-  z-index: 500;
-}
