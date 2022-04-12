@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {LoginResponse} from "./loginResponse";
 
 @Component({
   selector: 'app-header',
@@ -8,33 +10,76 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  form!: FormGroup;
+  loginForm!: FormGroup;
+  formRegistration!: FormGroup;
+  formCode!: FormGroup;
+
+  disable = false;
+
+  private baseUrl = 'http://localhost:8080';
 
   constructor(private router: Router,
-              private formBuilder: FormBuilder
+              private formBuilder: FormBuilder,
+              private http: HttpClient
               ) {
 
   }
 
   ngOnInit() {
-    this.form = this.formBuilder.group({
+    this.formRegistration = this.formBuilder.group({
       name: new FormControl('', [Validators.required, Validators.minLength(2)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmedPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
+    this.loginForm = this.formBuilder.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    })
   }
 
-  isConfirmedPassword() {
+/*  isConfirmedPassword() {
     return this.form.value.password === this.form.value.confirmedPassword;
-  }
+  }*/
 
   onSubmit() {
 
   }
 
-  toPage (link: string) {
-    this.router.navigate([link]);
+  httpOptions = {
+    headers: new HttpHeaders(
+      {
+        'Content-Type' : 'application/json'
+        //'Authorization' : 'TOKEN ИЗ LOCALSTORAGE'
+      }
+    )
+  }
+
+  login(): void {
+    // let loginRequest: LoginRequest = new LoginRequest();
+    // loginRequest.email=this.form.value.email;
+    // loginRequest.password=this.form.value.password;
+
+    let request = {"email":this.loginForm.value.email, "password":this.loginForm.value.password};
+    this.http.post<LoginResponse>(`${this.baseUrl}/api/auth/login`, JSON.stringify(request), this.httpOptions).subscribe((data:LoginResponse) => {
+      if(data.role=="CUSTOMER") {
+        this.router.navigate(["/personal-account-client"]);
+      } else if (data.role=="ADMIN"){
+        this.router.navigate(["/personal-account-admin"]);
+      }
+    });
+  }
+
+  registration(): void {
+    let request = {"email":this.formRegistration.value.email, "password":this.formRegistration.value.password, "name":this.formRegistration.value.name};
+    this.http.post<boolean>(`${this.baseUrl}/api/reg/createUser`, JSON.stringify(request), this.httpOptions).subscribe((data: boolean) => {
+      if (data == true) {
+
+      }
+      else {
+        this.disable = false;
+      }
+    })
   }
 
 }

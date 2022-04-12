@@ -27,7 +27,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" id="login">
     <div class="modal-content" id="background__login">
       <h5 class="modal-title">Вход</h5>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="loginForm">
           <div class="form-group col-7">
             <label id="email__login">e-mail</label>
             <input type="text" formControlName="email" class="input__modal"/>
@@ -36,7 +36,7 @@
             <label id="password__login">Пароль</label>
             <input type="password" formControlName="password" class="input__modal"/>
           </div>
-        <button type="button" class="button__modal" (click)="toPage('/personal-account-client')" [disabled]="form.invalid">Войти
+        <button type="submit" class="button__modal" placeholder="password" (click)="login()" data-bs-toggle="modal">Войти
         </button>
       </form>
       <p id="text__login">У меня еще нет аккаунта, <a data-bs-target="#windowRegistration" data-bs-toggle="modal"><span>зарегистрироваться.</span></a>
@@ -50,7 +50,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" id="registration">
     <div class="modal-content" id="background__registration">
       <h5 class="modal-title" id="registration__text">Регистрация</h5>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="formRegistration">
           <div class="form-group col-7">
             <label>Имя</label>
             <input type="name" class="form-control" formControlName="name" class="input__modal"/>
@@ -67,7 +67,7 @@
             <label>Введите пароль еще раз</label>
             <input type="password"  class="form-control" formControlName="confirmedPassword" class="input__modal"/>
           </div>
-        <button type="submit" class="button__modal" data-bs-toggle="modal" data-bs-target="#windowCode" [disabled]="form.invalid || !isConfirmedPassword()">Далее
+        <button type="submit" class="button__modal" data-bs-toggle="modal" data-bs-target="#windowCode" [disabled]="disable" id="openModalButton">Далее
         </button>
       </form>
     </div>
@@ -79,12 +79,12 @@
   <div class="modal-dialog modal-dialog-centered modal-lg" id="code">
     <div class="modal-content" id="background__code">
       <h5 class="modal-title">Регистрация</h5>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form [formGroup]="formCode">
           <div class="form-group col-7">
             <label>Введите код высланный на ваш e-mail</label>
             <input type="code" formControlName="code" class="input__modal"/>
           </div>
-        <button type="submit" id="button__code" (click)="toPage('/personal-account-client')" [disabled]="form.invalid" data-bs-dismiss="modal">
+        <button type="submit" id="button__code" data-bs-dismiss="modal">
           Зарегистрироваться
         </button>
       </form>
