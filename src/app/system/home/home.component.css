@@ -25,6 +25,14 @@
   line-height: 0.5;
   font-size: 23px;
 }
+
+.svg-home {
+  position: absolute;
+  z-index: 0;
+  left: 100px;
+  /* backdrop-filter: blur(4px); */
+}
+
 #swoosh {
   font-weight: 700;
   text-transform: uppercase;
@@ -287,6 +295,28 @@
   height: 1117px;
   width: 100vw;
 }
+
+.svg-reviews1 {
+  position: absolute;
+  z-index: 0;
+  margin-top: 137px;
+  margin-left: 10%;
+}
+
+.svg-reviews2 {
+  position: absolute;
+  z-index: 0;
+  margin-top: 428px;
+  margin-left: 10%;
+}
+
+.svg-reviews3 {
+  position: absolute;
+  z-index: 0;
+  margin-top: 719px;
+  margin-left: 10%;
+}
+
 .row__photos {
   height: 265px;
   white-space: nowrap;
@@ -308,9 +338,10 @@
   display: inline-block;
   overflow: hidden;
   cursor: url(../../../assets/pictures/reviews/cursor.png), pointer;
+  filter: drop-shadow(0px 4px 95px rgba(246, 226, 43, 0.35));
 }
 
-.effects  img {
+.effects .img__effects {
   display: block;
   position: relative;
   height:auto;
@@ -323,6 +354,15 @@
   overflow: hidden;
   top: 0;
   left: 0;
+}
+
+.effects .mask .logo__review {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  overflow: hidden;
+  margin: 22px 36px;
+
 }
 
 .effects .mask h2{
@@ -380,11 +420,11 @@
   width: calc(100% - 20px);
 }
 
-.effects img {
+.effects .img__effects {
   transition: all 0.5s linear;
 }
 
-.effects:hover img {
+.effects:hover .img__effects {
   transition: all .7s ease-in-out;
   opacity: 0;
 }
@@ -415,12 +455,14 @@
 
 .ellipse__faq {
   width: 288px;
-  height: 289px;
+  height: 288px;
   background: linear-gradient(210.12deg, #F6E22B 7.52%, #BB9D00 143.91%);
   box-shadow: 0px 4px 180px #F6E22B;
   margin-top: 185px;
   margin-left: -77px;
   border-radius: 50%;
+  z-index: 0;
+  position:absolute;
 }
 
 .rectangle__faq img {
@@ -431,24 +473,37 @@
 }
 
 .text__faq {
+  position: absolute;
+  margin-left: 645.5px;
   width: 250px;
-  float: left;
-}
-
-.text__faq img {
-  float: left;
-  width: 28px;
-  height: 28px;
-}
-
-.text__faq p {
-  float: left;
+  height: 30px;
   font-weight: 900;
   font-size: 18px;
   line-height: 23px;
   text-transform: uppercase;
   color: var(--dark);
-  margin-left: 14px;
+  display: block;
+  z-index: 20;
+
+}
+
+.text__faq ul li{
+  list-style: none;
+  background: url(../../../assets/pictures/faq/plus.svg) no-repeat left 50%;
+  padding-left: 42.5px;
+  padding-top: 2px;
+  height: 28px;
+}
+
+.text__faq li {
+  margin-top: 82px;
+}
+
+.FAQ__svg {
+  position: absolute;
+  z-index: 0;
+  top: 408px;
+  left: 860px;
 }
 
 

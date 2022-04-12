@@ -8,8 +8,8 @@
 
         <div class="add-wash__wrap">
           <div class="add-wash">
-            <button type="button" class="button__add-wash" (click)="onClick(11)"><img
-              src="../../../assets/pictures/paa/plus.png" class="add-wash-pic">Добавить автомойку
+            <button type="button" class="button__add-wash" (click)="onClick(11)"><span><img
+              src="../../../assets/pictures/paa/plus.png">Добавить автомойку</span>
             </button>
           </div>
         </div>
@@ -315,13 +315,16 @@
                                  aria-describedby="addon-wrapping">
                         </div>
                         <div class="add-photo">
-                          <li class="">Добавить фотографии<input type="file"></li>
+                          <input id="file-input" type="file" name="file" multiple>
+                          <label for="file-input">Добавить фотографии</label>
+                          <div></div>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="add-logo">
-                        <a><img src="../../../assets/pictures/paa/add_logo.png" alt=""></a>
+                          <input id="file-input1" type="file" name="file" multiple>
+                          <label for="file-input1"><a><img src="../../../assets/pictures/paa/add_logo.png" alt=""></a></label>
                       </div>
                     </div>
                   </div>
