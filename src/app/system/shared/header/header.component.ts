@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   formRegistration!: FormGroup;
   formCode!: FormGroup;
 
-  disable = false;
+  public showCode: boolean = false;
 
   private baseUrl = 'http://localhost:8080';
 
@@ -27,10 +27,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.formRegistration = this.formBuilder.group({
-      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      confirmedPassword: new FormControl('', [Validators.required, Validators.minLength(6)])
+      name: new FormControl('Ксюша', [Validators.required, Validators.minLength(2)]),
+      email: new FormControl('tebbyteb@gmail.com', [Validators.required, Validators.email]),
+      password: new FormControl('tebbyteb', [Validators.required, Validators.minLength(6)]),
+      confirmedPassword: new FormControl('tebbyteb', [Validators.required, Validators.minLength(6)]),
+      code: new FormControl('', Validators.required)
     });
     this.loginForm = this.formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -55,6 +56,10 @@ export class HeaderComponent implements OnInit {
     )
   }
 
+  showContent() {
+    this.showCode = true;
+  }
+
   login(): void {
     // let loginRequest: LoginRequest = new LoginRequest();
     // loginRequest.email=this.form.value.email;
@@ -70,14 +75,27 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+
   registration(): void {
     let request = {"email":this.formRegistration.value.email, "password":this.formRegistration.value.password, "name":this.formRegistration.value.name};
     this.http.post<boolean>(`${this.baseUrl}/api/reg/createUser`, JSON.stringify(request), this.httpOptions).subscribe((data: boolean) => {
       if (data == true) {
-
+       this.showContent();
       }
       else {
-        this.disable = false;
+        this.showCode = false;
+      }
+    })
+  }
+
+  confirmCode(): void {
+    let code = {"code":this.formRegistration.value.code, "email": this.formRegistration.value.email};
+    this.http.put<boolean>(`${this.baseUrl}/reg/checkConfirmation`, JSON.stringify(code), this.httpOptions).subscribe((data: boolean) => {
+      if (data == true) {
+        this.router.navigate(["/personal-account-client"]);
+      }
+      else {
+        alert("Введён неправильный код!");
       }
     })
   }

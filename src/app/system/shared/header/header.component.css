@@ -136,10 +136,10 @@
 
 #registration {
   width: 516px;
-  height: 507px;
-  padding: 10px;
+  min-height: 507px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 200px;
 }
 #background__registration {
   background-image: url("../../../../assets/pictures/modal/Background2.png");
@@ -147,7 +147,7 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 516px;
-  height: 507px;
+  min-height: 507px;
   background-color:rgba(0,0,0,.9);
   position: relative;
   border-radius: 10px;
@@ -187,6 +187,7 @@
   font-size: 23px;
   margin-left: 106px;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 

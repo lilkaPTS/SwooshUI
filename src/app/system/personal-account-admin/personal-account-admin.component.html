@@ -530,7 +530,20 @@
           </div>
           <div class="form-group col-7">
             <label>Выполняемые услуги</label>
-            <input type="text" class="input__modal"/>
+            <select name="class">
+              <option>30 мин</option>
+              <option>50 мин</option>
+            </select>
+
+          </div>
+          <div class="form-group col-7">
+            <label>Адрес автомойки</label>
+<!--            <li *ngFor="let names of nameCarWashes">
+            <p>{{names.nameCarWashes}}</p>
+            </li>-->
+            <select name="class" *ngFor="let names of nameCarWashes">
+              <option>{{names.nameCarWashes}}</option>
+            </select>
           </div>
           <button type="button" class="button__modal">Сохранить</button>
         </form>

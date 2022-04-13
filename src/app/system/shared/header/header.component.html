@@ -67,14 +67,22 @@
             <label>Введите пароль еще раз</label>
             <input type="password"  class="form-control" formControlName="confirmedPassword" class="input__modal"/>
           </div>
-        <button type="submit" class="button__modal" data-bs-toggle="modal" data-bs-target="#windowCode" [disabled]="disable" id="openModalButton">Далее
+        <div class="form-group col-7" *ngIf="showCode">
+          <label>Введите код высланный на ваш e-mail</label>
+          <input type="code" class="form-control" formControlName="code" class="input__modal"/>
+        </div>
+        <button type="submit" class="button__modal" data-bs-target="#windowCode" (click)="registration()" *ngIf="!showCode">Далее
+        </button>
+        <button type="submit" id="button__code" *ngIf="showCode" (click)="confirmCode()">
+          Зарегистрироваться
         </button>
       </form>
     </div>
   </div>
 </div>
 
-<!-- FORM CODE -->
+<!--
+ FORM CODE
 <div class="modal fade" id="windowCode" tabindex="-1" aria-labelledby="windowCode" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" id="code">
     <div class="modal-content" id="background__code">
@@ -91,4 +99,5 @@
     </div>
   </div>
 </div>
+-->
 

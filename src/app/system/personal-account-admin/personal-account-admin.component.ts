@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
+import {Carwashes} from "./carwashes";
 
 @Component({
   selector: 'app-personal-account-admin',
@@ -15,10 +17,19 @@ export class PersonalAccountAdminComponent implements OnInit {
   }
 
   form!: FormGroup;
+  private baseUrl = 'http://localhost:8080';
+  nameCarWashes: Carwashes[] = [];
 
-  constructor(private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
+  constructor(private formBuilder: FormBuilder,
+              private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get<any[]>(`${this.baseUrl}/api/admin/getAllCarWashes`).subscribe((data: any) => {
+        this.nameCarWashes=data["nameCarWash"];
+    }
+    );
   }
+
 
 }
