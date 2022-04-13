@@ -20,25 +20,23 @@ export class PersonalAccountAdminComponent implements OnInit {
   form!: FormGroup;
   private baseUrl = 'http://localhost:8080';
 
-  nameCarWashes!: Carwashes[];
+  nameCarWashes: string[] = new Array();
+  nameEmployees: string[] = new Array();
 
   constructor(private formBuilder: FormBuilder,
               private http: HttpClient) { }
 
-  httpOptions = {
-    headers: new HttpHeaders(
-      {
-        'Content-Type' : 'application/json'
-        //'Authorization' : 'TOKEN ИЗ LOCALSTORAGE'
-      }
-    )
-  }
 
   ngOnInit() {
-    this.http.get<Carwashes>(`${this.baseUrl}/api/admin/getAllCarWashes`).subscribe((data: Carwashes) => {
-        let nameCarWashes = data;
+    this.http.get<string[]>(`${this.baseUrl}/api/admin/getAllCarWashes`).subscribe((data: string[]) => {
+        this.nameCarWashes = data;
         }
       );
+
+
+    this.http.get<string[]>(`${this.baseUrl}/api/admin/getAllEmployees?location=ул. Белинского 32a`).subscribe((data:string[]) => {
+      this.nameEmployees = data;
+    });
     }
 
 

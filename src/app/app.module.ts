@@ -11,6 +11,7 @@ import {HeaderComponent} from "./system/shared/header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AboutCarwashComponent } from './system/about-carwash/about-carwash.component';
 import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 
 
@@ -29,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,55 +19,42 @@
           <label for="tab-btn-3">Прайс</label>
 
           <div id="content-1">
-            <div class="rectangle">
+            <select class="empSelect form-select-sm" aria-label=".form-select-sm example">
+              <option *ngFor="let rew for reviews">
+                {{rew}}
+              </option>
+            </select>
+            <p>Привет!</p>
+            <p>Привет!</p> <p>Привет!</p>
+            <p>Привет!</p>
+
+
+           <!-- <div class="rectangle">
               <div class="general">
                 <div class="ellipse"></div>
                 <div class="about__client">
-                <p><span>Иван Сенников</span> Сегодня</p>
+                <p><span>{{rew.split('-')[0]}}</span> Сегодня</p>
                 </div>
                 <button class="button__clientreview">1 Отзыв</button>
               </div>
               <div class="textclient__review">
-                <p>Мне нравится! Времени уходит не много, хорошо и быстро моют.</p>
+                <p>{{rew.split('-')[1]}}</p>
               </div>
-            </div>
-            <div class="rectangle">
+            </div>-->
+<!--            <div class="rectangle">
               <div class="general">
                 <div class="ellipse"></div>
                 <div class="about__client">
-                  <p><span>Иван Сенников</span> Сегодня</p>
+                  <p><span>Вася</span> Сегодня</p>
                 </div>
                 <button class="button__clientreview">1 Отзыв</button>
               </div>
               <div class="textclient__review">
-                <p>Мне нравится! Времени уходит не много, хорошо и быстро моют.</p>
+                <p>Спасибо</p>
               </div>
-            </div>
-            <div class="rectangle">
-              <div class="general">
-                <div class="ellipse"></div>
-                <div class="about__client">
-                  <p><span>Иван Сенников</span> Сегодня</p>
-                </div>
-                <button class="button__clientreview">1 Отзыв</button>
-              </div>
-              <div class="textclient__review">
-                <p>Мне нравится! Времени уходит не много, хорошо и быстро моют.</p>
-              </div>
-            </div>
-            <div class="rectangle">
-              <div class="general">
-                <div class="ellipse"></div>
-                <div class="about__client">
-                  <p><span>Иван Сенников</span> Сегодня</p>
-                </div>
-                <button class="button__clientreview">1 Отзыв</button>
-              </div>
-              <div class="textclient__review">
-                <p>Мне нравится! Времени уходит не много, хорошо и быстро моют.</p>
-              </div>
-            </div>
+            </div>-->
           </div>
+
           <div id="content-2">
             <div class="photo__row1">
               <img src="../../../assets/pictures/about-carwash/photo2.png">
@@ -79,6 +66,7 @@
               <img src="../../../assets/pictures/about-carwash/photo5.png">
             </div>
           </div>
+
           <div id="content-3">
             <div class="price">
               <div class="about__carwash">
