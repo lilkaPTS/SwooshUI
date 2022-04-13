@@ -33,8 +33,7 @@
                 <div class="form-group col-7">
                   <label>Услуга</label>
                   <select name="service">
-                    <option>Автомойка</option>
-                    <option>Химчистка</option>
+                    <option *ngFor="let ser of services">{{ser.name}}</option>
                   </select>
                 </div>
                 <div class="form-group col-7">
@@ -43,7 +42,7 @@
                 </div>
               </form>
               <h1>Итого:</h1>
-              <p id="price__service">0 руб</p>
+              <p id="price__service"> 0 руб</p>
               <div class="checkbox">
                 <input type="checkbox" id="checkbox1">
                 <label for="checkbox1"> Я согласен с Политикой

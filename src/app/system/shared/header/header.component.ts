@@ -39,10 +39,6 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-/*  isConfirmedPassword() {
-    return this.form.value.password === this.form.value.confirmedPassword;
-  }*/
-
   onSubmit() {
 
   }

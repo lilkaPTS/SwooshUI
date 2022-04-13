@@ -73,7 +73,7 @@
         </div>
         <button type="submit" class="button__modal" data-bs-target="#windowCode" (click)="registration()" *ngIf="!showCode">Далее
         </button>
-        <button type="submit" id="button__code" *ngIf="showCode" (click)="confirmCode()">
+        <button type="submit" id="button__code" *ngIf="showCode" (click)="confirmCode()" data-bs-dismiss="modal">
           Зарегистрироваться
         </button>
       </form>

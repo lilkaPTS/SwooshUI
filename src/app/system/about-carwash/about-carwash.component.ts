@@ -26,6 +26,7 @@ export class AboutCarwashComponent implements OnInit {
 
     this.http.get<Services[]>(`${this.baseUrl}/api/customer/getListOfServices?carWashLocation=ул. Белинского 32a`).subscribe((data: Services[]) => {
       this.services = data;
+      console.log(data);
     })
   }
 
