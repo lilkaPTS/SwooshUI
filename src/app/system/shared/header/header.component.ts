@@ -88,9 +88,12 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  confirmCode(): void {
-    let code = {"code":this.formRegistration.value.code, "email": this.formRegistration.value.email};
-    this.http.put<boolean>(`${this.baseUrl}/reg/checkConfirmation`, JSON.stringify(code), this.httpOptions).subscribe((data: boolean) => {
+ /* confirmCode(): void {
+    let code: FormData = new FormData();
+    code.append('email', '123');
+    code.append('code', '123');
+    console.log(code);
+    this.http.put<boolean>(`${this.baseUrl}/reg/checkConfirmation`, code).subscribe((data: boolean) => {
       if (data == true) {
         this.router.navigate(["/personal-account-client"]);
       }
@@ -98,6 +101,6 @@ export class HeaderComponent implements OnInit {
         alert("Введён неправильный код!");
       }
     })
-  }
+  }*/
 
 }

@@ -1,10 +1,10 @@
 export class Carwashes {
-  private nameCarWash: string = "";
+  nameCarWash!: string;
 
   constructor() {
   }
 
-  get nameCarWashes(): string {
+  public getNameCarWashes(): string {
     return this.nameCarWash;
   }
 

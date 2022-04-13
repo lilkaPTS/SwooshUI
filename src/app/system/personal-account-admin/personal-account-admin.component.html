@@ -541,8 +541,10 @@
 <!--            <li *ngFor="let names of nameCarWashes">
             <p>{{names.nameCarWashes}}</p>
             </li>-->
-            <select name="class" *ngFor="let names of nameCarWashes">
-              <option>{{names.nameCarWashes}}</option>
+            <select name="class">
+              <option *ngFor="let names of nameCarWashes">
+               {{names.getNameCarWashes()}}
+              </option>
             </select>
           </div>
           <button type="button" class="button__modal">Сохранить</button>
