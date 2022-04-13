@@ -1,16 +1,20 @@
 export class Reviews {
-  nameCustomer!: string;
+  username!: string;
   text!: string;
+  carWashLocation!: string;
 
   constructor() {
   }
 
   public getNameCustomer(): string {
-    return this.nameCustomer;
+    return this.username;
   }
 
   public getText(): string {
     return this.text;
   }
 
+  public getLocation(): string {
+    return this.carWashLocation;
+  }
 }

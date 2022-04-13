@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Reviews} from "./reviews";
+import {Services} from "./services";
 
 @Component({
   selector: 'app-about-carwash',
@@ -9,7 +10,8 @@ import {Reviews} from "./reviews";
 })
 export class AboutCarwashComponent implements OnInit {
 
-  reviews: string[] = ['Вася-норм', 'Вася-норм', 'Вася-норм', 'Вася-норм', 'Вася-норм', 'Вася-норм'];
+  reviews: Reviews[] = new Array();
+  services: Services[] = new Array();
   private baseUrl = 'http://localhost:8080';
 
 
@@ -18,10 +20,13 @@ export class AboutCarwashComponent implements OnInit {
   ngOnInit(): void {
 
     this.http.get<Reviews[]>(`${this.baseUrl}/api/public/getReviews?carWashLocation=ул. Белинского 32a`).subscribe((data: Reviews[]) => {
-      data.forEach(s=>console.log(s));
-    /*    this.reviews = data;*/
+        this.reviews = data;
       }
     );
+
+    this.http.get<Services[]>(`${this.baseUrl}/api/customer/getListOfServices?carWashLocation=ул. Белинского 32a`).subscribe((data: Services[]) => {
+      this.services = data;
+    })
   }
 
 }

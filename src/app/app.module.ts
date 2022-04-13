@@ -28,10 +28,10 @@ import {CommonModule} from "@angular/common";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    CommonModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

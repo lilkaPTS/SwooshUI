@@ -19,40 +19,18 @@
           <label for="tab-btn-3">Прайс</label>
 
           <div id="content-1">
-            <select class="empSelect form-select-sm" aria-label=".form-select-sm example">
-              <option *ngFor="let rew for reviews">
-                {{rew}}
-              </option>
-            </select>
-            <p>Привет!</p>
-            <p>Привет!</p> <p>Привет!</p>
-            <p>Привет!</p>
-
-
-           <!-- <div class="rectangle">
+            <div class="rectangle" *ngFor="let rew of reviews">
               <div class="general">
                 <div class="ellipse"></div>
                 <div class="about__client">
-                <p><span>{{rew.split('-')[0]}}</span> Сегодня</p>
+                  <p><span>{{rew.username}}</span> Сегодня</p>
                 </div>
                 <button class="button__clientreview">1 Отзыв</button>
               </div>
               <div class="textclient__review">
-                <p>{{rew.split('-')[1]}}</p>
+                <p>{{rew.text}}</p>
               </div>
-            </div>-->
-<!--            <div class="rectangle">
-              <div class="general">
-                <div class="ellipse"></div>
-                <div class="about__client">
-                  <p><span>Вася</span> Сегодня</p>
-                </div>
-                <button class="button__clientreview">1 Отзыв</button>
-              </div>
-              <div class="textclient__review">
-                <p>Спасибо</p>
-              </div>
-            </div>-->
+            </div>
           </div>
 
           <div id="content-2">
@@ -68,76 +46,17 @@
           </div>
 
           <div id="content-3">
-            <div class="price">
+            <div class="price" *ngFor="let ser of services">
               <div class="about__carwash">
-              <h3>Автоматическая мойка</h3>
+              <h3>{{ser.name}}</h3>
               <p>Описание</p>
               </div>
               <div class="price__carwash">
-              <p class="price__text"><span>Цена</span> руб</p>
+              <p class="price__text"><span>{{ser.price}}</span> руб</p>
               </div>
               <hr>
             </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
-            <div class="price">
-              <div class="about__carwash">
-                <h3>Автоматическая мойка</h3>
-                <p>Описание</p>
-              </div>
-              <div class="price__carwash">
-                <p class="price__text"><span>Цена</span> руб</p>
-              </div>
-              <hr>
-            </div>
+
           </div>
         </div>
       </div>
