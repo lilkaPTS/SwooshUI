@@ -27,10 +27,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.formRegistration = this.formBuilder.group({
-      name: new FormControl('Ксюша', [Validators.required, Validators.minLength(2)]),
-      email: new FormControl('tebbyteb@gmail.com', [Validators.required, Validators.email]),
-      password: new FormControl('tebbyteb', [Validators.required, Validators.minLength(6)]),
-      confirmedPassword: new FormControl('tebbyteb', [Validators.required, Validators.minLength(6)]),
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      confirmedPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
       code: new FormControl('', Validators.required)
     });
     this.loginForm = this.formBuilder.group({
