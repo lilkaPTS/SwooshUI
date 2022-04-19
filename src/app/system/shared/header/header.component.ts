@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmedPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      code: new FormControl('', Validators.required)
+      code: new FormControl('')
     });
     this.loginForm = this.formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
