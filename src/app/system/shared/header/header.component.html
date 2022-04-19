@@ -36,7 +36,7 @@
             <label id="password__login">Пароль</label>
             <input type="password" formControlName="password" class="input__modal"/>
           </div>
-        <button type="submit" class="button__modal" placeholder="password" (click)="login()" data-bs-toggle="modal">Войти
+        <button type="button" class="button__modal" placeholder="password" (click)="login()" data-bs-dismiss="modal">Войти
         </button>
       </form>
       <p id="text__login">У меня еще нет аккаунта, <a data-bs-target="#windowRegistration" data-bs-toggle="modal"><span>зарегистрироваться.</span></a>
@@ -71,9 +71,8 @@
           <label>Введите код высланный на ваш e-mail</label>
           <input type="code" class="form-control" formControlName="code" class="input__modal"/>
         </div>
-        <button type="submit" class="button__modal" data-bs-target="#windowCode" (click)="registration()" *ngIf="!showCode">Далее
-        </button>
-        <button type="submit" id="button__code" *ngIf="showCode" (click)="confirmCode()" data-bs-dismiss="modal">
+        <button type="button" class="button__modal" data-bs-target="#windowCode" (click)="registration()" *ngIf="!showCode" [disabled]="formRegistration.invalid">Далее</button>
+        <button type="button" id="button__code"  data-bs-dismiss="modal" *ngIf="showCode" (click)="confirmCode()">
           Зарегистрироваться
         </button>
       </form>

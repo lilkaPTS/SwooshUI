@@ -52,10 +52,6 @@ export class HeaderComponent implements OnInit {
     )
   }
 
-  showContent() {
-    this.showCode = true;
-  }
-
   login(): void {
     // let loginRequest: LoginRequest = new LoginRequest();
     // loginRequest.email=this.form.value.email;
@@ -75,10 +71,9 @@ export class HeaderComponent implements OnInit {
   registration(): void {
     let request = {"email":this.formRegistration.value.email, "password":this.formRegistration.value.password, "name":this.formRegistration.value.name};
     this.http.post<boolean>(`${this.baseUrl}/api/reg/createUser`, JSON.stringify(request), this.httpOptions).subscribe((data: boolean) => {
-      if (data == true) {
-       this.showContent();
-      }
-      else {
+      if (data) {
+        this.showCode = true;
+      } else {
         this.showCode = false;
       }
     })
